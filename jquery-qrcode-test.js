@@ -6,8 +6,7 @@ if (Meteor.isClient) {
 
   Template.on_event.events({
     'click #submit': function(event, template){
-      //$('#key_up_qrcode').empty();
-      console.log(template.find("#keyup_qrcode_id").value.toString());
+      $('#key_up_qrcode').empty();
       $('#key_up_qrcode').qrcode({text: template.find("#keyup_qrcode_id").value.toString(),width: 100,height: 100,});
     },
   });
