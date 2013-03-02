@@ -1,0 +1,45 @@
+<head>
+  <title>jquery-qrcode-test</title>
+</head>
+
+<body>
+  {{> hello}}
+  <hr/>
+  {{> on_rendered}}
+  <hr/>
+  {{> on_event}}
+</body>
+
+<template name="hello">
+  <h1>jquery-qrcode-test</h1>
+  <p>By <a href="http://www.etherpos.com" target="_blank">EtherPOS</a></p>
+  <p>Test for Meteor meteorite/atmosphere smart package jquery-qrcode.</p>
+  <p>More info at:<br/>
+    mrt it <a href="https://atmosphere.meteor.com/package/jquery-qrcode" target="_blank">jquery-qrcode @ atmosphere</a><br/>
+    git jquery-qrcode <a href="https://github.com/EtherPOS/meteor-jquery-qrcode" target="_blank">jquery-qrcode @ github</a><br/>
+    git jquery-qrcode-test <a href="https://github.com/EtherPOS/meteor-jquery-qrcode-test" target="_blank">jquery-qrcode-test @ github</a>
+  </p>
+</template>
+
+<template name="on_rendered">
+  <h2>On rendered</h2>
+  <h3>Hardcoded</h3>
+    <center><div id="qr"></div></center>
+  <h3>From DOM</h3>
+  <p>Iterate over a collection in template generating qrcodes from dom automatically.</p>
+  <center>
+    <b>QR code ID:</b> <span id="qrcode_id">1234567890</span> 
+    <div id="qr1234567890"></div>
+  </center>
+</template>
+
+<template name="on_event">
+  <h2>On event</h2>
+  <h3>On keyup</h3>
+  <input type="text" id="keyup_qrcode_id" name="keyup_qrcode_id" value="change me"><button name="submit" id="submit">update</button>
+  <center>
+    <div id="key_up_qrcode"></div>
+  </center>
+</template>
+
+
